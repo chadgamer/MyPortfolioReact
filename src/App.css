@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root{
+--purple-50: oklch(95% .05 300);    /* Very light purple */
+  --purple-100: oklch(90% .08 302);   /* Light purple */
+  --purple-200: oklch(85% .12 304);   /* Soft purple */
+  --purple-300: oklch(80% .15 306);   /* Medium light purple */
+  --purple-400: oklch(75% .18 308);   /* Medium purple */
+  --purple-500: oklch(70% .22 310);   /* Core purple */
+  --purple-600: oklch(65% .25 312);   /* Medium dark purple */
+  --purple-700: oklch(60% .28 314);   /* Dark purple */
+  --purple-800: oklch(55% .30 316);   /* Deeper purple */
+  --purple-900: oklch(50% .32 318);   /* Darkest purple */
+  --animated-gradient: var(--purple-500);
+}
+
+
+.span-bg{
+  background: #a11cd6;
+background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1) 45%, rgba(0, 212, 255, 1) 100%);
+}
+
+.gradient-bg {
+  background: radial-gradient(125% 125% at 50% 0%, rgb(0,0,0) 50%, var(--animated-gradient));
+  animation: gradientColorShift 30s infinite ease-in-out;
+}
+
+.gradient-text {
+  color: rgb(214, 96, 154);
+  animation: colorShift 30s infinite ease-in-out;
+}
+
+@keyframes colorShift {
+  0%   { color: var(--purple-300); }
+  20%  { color: var(--purple-400); }
+  40%  { color: var(--purple-500); }
+  60%  { color: var(--purple-600); }
+  80%  { color: var(--purple-700); }
+  100% { color: var(--purple-300); }
+}
+
+@keyframes gradientColorShift {
+  0%   { --animated-gradient: var(--purple-300); }
+  20%  { --animated-gradient: var(--purple-400); }
+  40%  { --animated-gradient: var(--purple-500); }
+  60%  { --animated-gradient: var(--purple-600); }
+  80%  { --animated-gradient: var(--purple-700); }
+  100% { --animated-gradient: var(--purple-300); }
+}
+
+
+
+
