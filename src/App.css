@@ -22,12 +22,12 @@ background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1
 
 .gradient-bg {
   background: radial-gradient(125% 125% at 50% 0%, rgb(0,0,0) 50%, var(--animated-gradient));
-  animation: gradientColorShift 30s infinite ease-in-out;
+  animation: gradientColorShift 15s infinite ease-in-out;
 }
 
 .gradient-text {
   color: rgb(214, 96, 154);
-  animation: colorShift 30s infinite ease-in-out;
+  animation: colorShift 15s infinite ease-in-out;
 }
 
 @keyframes colorShift {
