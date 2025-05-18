@@ -6,8 +6,11 @@ import {
   LineElement,
   Filler,
   Tooltip,
+  CategoryScale, 
+  BarElement,  
+  LinearScale 
 } from 'chart.js';
-import { Radar } from 'react-chartjs-2';
+import { Radar, Bar } from 'react-chartjs-2';
 
 ChartJS.register(
   RadialLinearScale,
@@ -15,6 +18,9 @@ ChartJS.register(
   LineElement,
   Filler,
   Tooltip,
+  CategoryScale, 
+  BarElement,     
+  LinearScale 
 );
 
 
@@ -24,16 +30,15 @@ function Skills() {
 
 const data = {
   labels: [
-    'Eating',
-    'Drinking',
-    'Sleeping',
-    'Designing',
-    'Coding',
-    'Cycling',
-    'Running'
+    'Responsive Design',
+    'CSS',
+    'HTML',
+    'Tailwind',
+    'JavaScript',
+    'React JS',
   ],
   datasets: [{
-    data: [28, 48, 40, 19, 96, 27, 100],
+    data: [90, 90, 85, 80, 80, 75],
     fill: true,
     backgroundColor: 'rgba(179, 44, 213, 0.2)',
     borderColor: '#a855f7',
@@ -66,7 +71,67 @@ const options = {
       }
     },
   };
+  
 
+
+const barlabels = ['Web Design','Mobile Design', 'FE Developement', 'Troubleshooting', 'Networking'];
+const bardata = {
+  labels: barlabels,
+  datasets: [{
+    axis: 'y',
+    label: 'My Year of Experience',
+    data: [2, 2,2, 1, 1],
+    fill: false,
+    backgroundColor: [
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+    ],
+    borderColor: [
+      'rgb(153, 102, 255)',
+      'rgb(153, 102, 255)',
+      'rgb(153, 102, 255)',
+      'rgb(153, 102, 255)',
+      'rgb(153, 102, 255)',
+    ],
+    borderWidth: 1
+  }]
+};
+
+const barOptions = {
+  indexAxis: 'y',
+  scales: {
+    x: {
+      beginAtZero: true,
+      ticks: {
+        font: {
+          size: 14 // Adjust x-axis labels size
+        },
+        color: '#f3f4f6'
+      }
+    },
+    y: {
+      ticks: {
+        font: {
+          size: 14 // Adjust y-axis labels size
+        },
+        color: '#f3f4f6'
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      labels: {
+        font: {
+          size: 14
+        },
+        color: '#f3f4f6'
+      }
+    }
+  }
+};
 
 
 
@@ -85,7 +150,7 @@ const options = {
                 <div className="grid grid-col-2 items-center justify-center">
 
                     <div className="col-start-1 bg-[#111827] w-200 h-170 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
-                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10">Technical Proficiency</h1>
+                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10 mb-10">Front-End Skills</h1>
                         <div className="h-130 w-150 flex items-center justify-center text-center">
                         <Radar data={data} options={options} />
                         </div>
@@ -93,9 +158,9 @@ const options = {
                    
 
                     <div className="col-start-2 bg-[#111827] w-200 h-170 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
-                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10">Experience Level</h1>
+                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10 mb-10">Experience Level</h1>
                         <div className="h-130 w-150 flex items-center justify-center text-center">
-                        <Radar data={data} options={options}/>
+                            <Bar data={bardata} options={barOptions} />
                         </div>
                     </div>
 
