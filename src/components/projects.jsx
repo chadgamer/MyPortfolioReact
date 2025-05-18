@@ -57,7 +57,7 @@ function Projects() {
     
     
     return (
-        <div className="row-start-3 bg-[#020203] flex flex-col items-center justify-center gap-6">
+        <div className="row-start-3 bg-[#111827] flex flex-col items-center justify-center gap-6">
             <div className="flex flex-col items-center justify-center gap-6">
             <h1 className="font-poppins text-4xl font-bold text-center mt-16 gradient-text">
                 Projects
@@ -73,7 +73,7 @@ function Projects() {
                         className={`px-4 py-2 rounded-sm text-sm transition-colors duration-200 ${
                             activeButton === button.name
                                 ? 'bg-[#a855f7] text-white'
-                                : 'text-white bg-[#111827] hover:bg-[#1f2937]'
+                                : 'text-white bg-[#1F2937] hover:bg-[#1f2937]'
                         }`}
                     >
                         {button.label}
@@ -81,9 +81,9 @@ function Projects() {
                 ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-6 mt-10 max-md:grid-cols-1">
+            <div className="grid grid-cols-3 gap-6 mt-10 max-md:grid-cols-1 mb-10">
                 {projects.map((project) => (
-                  <div className="bg-[#111827] flex flex-col justfiy-center item-center rounded-b-lg w-100 hover:scale-104 transition delay-300 duration-300 ease-in-out">
+                  <div className="bg-[#1F2937] flex flex-col justfiy-center item-center rounded-b-lg w-100 hover:scale-104 transition delay-300 duration-300 ease-in-out">
                         <img src={project.image} alt="" className="h-50 w-200 rounded-t-lg" />
 
                         <div className="p-6">
