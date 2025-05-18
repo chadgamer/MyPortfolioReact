@@ -84,7 +84,7 @@ const options = {
                 {/* 1st card */}
                 <div className="grid grid-col-2 items-center justify-center">
 
-                    <div className="col-start-1 bg-[#111827] w-200 h-150 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
+                    <div className="col-start-1 bg-[#111827] w-200 h-170 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
                         <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10">Technical Proficiency</h1>
                         <div className="h-130 w-150 flex items-center justify-center text-center">
                         <Radar data={data} options={options} />
@@ -92,10 +92,10 @@ const options = {
                     </div>
                    
 
-                    <div className="col-start-1 bg-[#111827] w-200 h-150 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
+                    <div className="col-start-2 bg-[#111827] w-200 h-170 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
                         <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10">Experience Level</h1>
                         <div className="h-130 w-150 flex items-center justify-center text-center">
-                        <Radar data={data} options={options} />
+                        <Radar data={data} options={options}/>
                         </div>
                     </div>
 
