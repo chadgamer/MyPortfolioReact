@@ -8,6 +8,8 @@ import reactIcon from "../assets/react-svgrepo-com.svg"
 import firebaseIcon from "../assets/firebase-svgrepo-com.svg"
 import figmaIcon from "../assets/figma-svgrepo-com.svg"
 import wixIcon from "../assets/wix-svgrepo-com.svg"
+import AnimatedContent from './reactbits/animatedcontent';
+import ScrollFloat from './reactbits/scrollfloat';
 
 
 function Projects() {
@@ -57,49 +59,19 @@ function Projects() {
     
     
     return (
-        <div className="row-start-3 bg-[#111827] flex flex-col items-center justify-center gap-6">
-            <div className="flex flex-col items-center justify-center gap-6">
-            <h1 className="font-poppins text-4xl font-bold text-center mt-16 gradient-text">
-                Projects
-            </h1>
-            <p className="text-[#f3f4f6]">Explore my latest work across UI/UX design, web and mobile development. Each project<br />demonstrates my approach to solving design and technical challenges.</p>
-            </div>
-
-            <div className="flex gap-4">
-                {buttons.map((button) => (
-                    <button
-                        key={button.name}
-                        onClick={() => setActiveButton(button.name)}
-                        className={`px-4 py-2 rounded-sm text-sm transition-colors duration-200 ${
-                            activeButton === button.name
-                                ? 'bg-[#a855f7] text-white'
-                                : 'text-white bg-[#1F2937] hover:bg-[#1f2937]'
-                        }`}
-                    >
-                        {button.label}
-                    </button>
-                ))}
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 mt-10 max-md:grid-cols-1 mb-10">
-                {projects.map((project) => (
-                  <div className="bg-[#1F2937] flex flex-col justfiy-center item-center rounded-b-lg w-100 hover:scale-104 transition delay-300 duration-300 ease-in-out">
-                        <img src={project.image} alt="" className="h-50 w-200 rounded-t-lg" />
-
-                        <div className="p-6">
-                            <h3 className="text-white text-lg">{project.name}</h3>
-                            <p className="text-[#f3f4f6] text-xs pt-2">{project.description}</p>
-                        </div>
-
-                        <div className="pl-6 pb-4 flex gap-2">
-                           {project.tools.map((tool, index) => (
-                    <img src={tool} alt="" className="h-5" />
-                ))}
-                        </div>
-                    </div>
-                ))}
-            </div>
+        <div>
+            <ScrollFloat
+  animationDuration={1}
+  ease='back.inOut(2)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=40%'
+  stagger={0.03}
+>
+  reactbits
+</ScrollFloat>
+            
         </div>
+          
     );
 
 }

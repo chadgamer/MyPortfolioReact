@@ -1,16 +1,44 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import Lanyard from './reactbits/lanyard';
+import Hyperspeed from './reactbits/hyperspeed';
+import RotatingText from './reactbits/rotatingtext';
+import { Button, Flex } from 'antd';
 
 function Hero() {
   return (
-    <div className='flex flex-col justify-center items-center text-center h-screen text-white row-start-2 gradient-bg'>
-      <h1 className='text-7xl font-bold'>Hello, I'm <span className='gradient-text'><TypeAnimation sequence={['UI/UX Designer', 500, 'Front-end Developer', 500, 'Mc Lester Papa', 500]}
-  style={{ fontSize: '72px' }}
-/></span></h1>
-      <p className='text-lg mt-4 font-inter'>I'm a <span className='gradient-text font-semibold text-2xl'>Aspiring UI/UX Designer & Front-End Developer</span> |🔥 Dedicated to do enhance user experience</p>
-      <div className='flex flex-row items-center gap-4 mt-6'>
-      <button className='mt-6 px-6 py-2 bg-[#a855f7] text-white rounded-full hover:bg-[#9333ea] transition duration-300'>View Project</button>
-      <button className='mt-6 px-6 py-2 bg-[#000] border-2 text-[#9333ea] rounded-full hover:bg-[#9333ea] hover:text-white hover:border-[#9333ea] transition duration-300'>Contact Me</button>
+    <div className='relative h-screen w-full overflow-hidden bg-[#020203] pl-16'>
+      <div className='absolute inset-0 z-0'>
+        <Hyperspeed />
+      </div>
+      <div className='relative z-10 flex flex-col  justify-center h-full'>
+        <p className='text-4xl mb-4 text-white font-semibold'>I'm a aspiring <RotatingText
+        texts={['UI/UX Designer', 'Front-end Developer']}
+        mainClassName="gradient-bg"
+        staggerFrom={"last"}
+        initial={{ y: "100%" }}
+        animate={{ y: 0 }}
+        exit={{ y: "-120%" }}
+        staggerDuration={0.025}
+        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+        transition={{ type: "spring", damping: 30, stiffness: 400 }}
+        rotationInterval={2000}
+        /></p>
+        <h1 className='text-8xl font-bold mb-2 text-white'>I'm Mc Lester Papa</h1>
+        <h1 className='text-8xl font-bold mb-6 gradient-text'>Jr UI/UX Designer</h1>
+        <p className='max-w-2xl text-2xl text-white font-normal'>
+          I'm a fresh graduate from Bulacan State University, based in the Philippines. 
+          I'm passionate about crafting modern, user-centered interfaces and building 
+          responsive websites that deliver great user experiences.
+        </p>
+        <button className='gradient-bg text-white rounded-lg w-50 h-15 mt-10'>Download CV</button>
+      </div>
+
+      <div className='absolute inset-0 z-10 left-250'>
+        <Lanyard
+          position={[0, 0,15]} 
+          gravity={[0, -40, 0]}
+        />
       </div>
     </div>
   );

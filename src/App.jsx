@@ -9,7 +9,6 @@ function App() {
 
   return (
     <div className='grid grid-row-5'>
-    <Navbar />
     <Hero />
     <Projects />
     <Skills />

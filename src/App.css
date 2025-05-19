@@ -21,7 +21,7 @@ background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1
 }
 
 .gradient-bg {
-  background: radial-gradient(125% 125% at 50% 0%, #020203 50%, var(--animated-gradient));
+  background-color: rgb(214, 96, 154);
   animation: gradientColorShift 15s infinite ease-in-out;
 }
 
@@ -40,12 +40,12 @@ background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1
 }
 
 @keyframes gradientColorShift {
-  0%   { --animated-gradient: var(--purple-300); }
-  20%  { --animated-gradient: var(--purple-400); }
-  40%  { --animated-gradient: var(--purple-500); }
-  60%  { --animated-gradient: var(--purple-600); }
-  80%  { --animated-gradient: var(--purple-700); }
-  100% { --animated-gradient: var(--purple-300); }
+  0%   { background-color: var(--purple-300); }
+  20%  { background-color: var(--purple-400); }
+  40%  { background-color: var(--purple-500); }
+  60%  { background-color: var(--purple-600); }
+  80%  { background-color: var(--purple-700); }
+  100% { background-color: var(--purple-300); }
 }
 
 
