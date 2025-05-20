@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root{
 --purple-50: oklch(95% .05 300);    /* Very light purple */
@@ -30,6 +33,7 @@ background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1
   animation: colorShift 15s infinite ease-in-out;
 }
 
+
 @keyframes colorShift {
   0%   { color: var(--purple-300); }
   20%  { color: var(--purple-400); }
@@ -47,7 +51,5 @@ background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1
   80%  { background-color: var(--purple-700); }
   100% { background-color: var(--purple-300); }
 }
-
-
 
 
