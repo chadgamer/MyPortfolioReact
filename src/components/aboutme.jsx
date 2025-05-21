@@ -56,7 +56,7 @@ export default function Aboutme () {
                     <div className="grid grid-col-2">
                         <div className="col-start-1">
                             <p className="text-[#828282]">Name</p>
-                            <h4 className="text-white mb-5">Mc Lester Papa</h4>
+                            <h4 className="text-white mb-5">Mc Lester A. Papa</h4>
 
                              <p className="text-[#828282]">Location</p>
                             <h4 className="text-white">Bulacan</h4>
