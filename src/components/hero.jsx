@@ -14,7 +14,7 @@ function Hero() {
     <div className='relative h-screen w-full overflow-hidden bg-[#020203] pl-16 row-start-1'>
       
 
-      <div className='absolute inset-0 z-5'>
+      <div className='absolute inset-0 z-10'>
         <Particles
     particleColors={['#ffffff', '#ffffff']}
     particleCount={200}
@@ -28,9 +28,9 @@ function Hero() {
       </div>
 
 
-      <div className='relative z-10 flex flex-col  justify-center h-full'>
+      <div className='relative z-5 flex flex-col  justify-center h-full'>
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-        <div className='text-4xl mb-4 text-white font-semibold'>I'm a aspiring <RotatingText
+        <div className='text-4xl mb-4 text-white font-semibold max-md:text-xl'>I'm a aspiring <RotatingText
         texts={['UI/UX Designer', 'Front-end Developer']}
         mainClassName="gradient-bg"
         staggerFrom={"last"}
