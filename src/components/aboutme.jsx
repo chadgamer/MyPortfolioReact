@@ -11,7 +11,7 @@ export default function Aboutme () {
     return (
         <div className="row-start-2 relative">
 
-            <div className='absolute inset-0 z-11'>
+            <div className='absolute inset-0 z-10'>
                     <Particles
                 particleColors={['#ffffff', '#ffffff']}
                 particleCount={200}
@@ -23,7 +23,7 @@ export default function Aboutme () {
                 disableRotation={false}
               />
                   </div>
-            <div className="flex flex-row justify-center bg-[#020203] gap-50 pt-50 pb-50">
+            <div className="flex flex-row justify-center bg-[#020203] gap-50 pt-50 pb-50 z-12">
                 <AnimatedContent
   distance={50}
   delay={500}
