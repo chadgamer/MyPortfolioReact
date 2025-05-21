@@ -53,3 +53,46 @@ background: linear-gradient(90deg,rgba(161, 28, 214, 1) 0%, rgba(112, 15, 148, 1
 }
 
 
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: #020203;
+  height: 20rem;
+  contain: layout paint;
+  display: flex;
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* optional: centers horizontally */
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;       /* vertical centering inside content */
+  height: 100%;
+  will-change: transform;
+  transform: translateZ(0);
+  animation: scroll 30s linear infinite;
+}
+
+
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-track span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  padding-right: 4rem;
+  font-family: 'Gravitas One', Helvetica, Arial, sans-serif;
+}
+  
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

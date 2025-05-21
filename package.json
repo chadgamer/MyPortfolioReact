@@ -30,6 +30,7 @@
     "gsap": "^3.13.0",
     "meshline": "^3.3.1",
     "motion": "^12.12.1",
+    "ogl": "^1.0.11",
     "postprocessing": "^6.37.3",
     "react": "^19.1.0",
     "react-apexcharts": "^1.7.0",

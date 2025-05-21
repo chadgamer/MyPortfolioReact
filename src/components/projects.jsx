@@ -13,6 +13,7 @@ import AnimatedContent from './reactbits/animatedcontent';
 import ScrollFloat from './reactbits/scrollfloat';
 import BlurText from './reactbits/blurtext';
 import PixelCard from './reactbits/pixelcard';
+import Particles from './reactbits/particles';
 
 
 function Projects() {
@@ -60,17 +61,30 @@ function Projects() {
     
     
     return (
-        <div className="bg-[#020203]">
-            <div className="flex flex-col justify-center item-center">
+        <div className="bg-[#020203] h-full pt-50 pb-50 row-start-4 relative">
+
+             <div className='absolute inset-0 z-0'>
+                    <Particles
+                particleColors={['#ffffff', '#ffffff']}
+                particleCount={200}
+                particleSpread={10}
+                speed={0.1}
+                particleBaseSize={100}
+                moveParticlesOnHover={true}
+                alphaParticles={false}
+                disableRotation={false}
+              />
+                  </div>
+            <div className="flex flex-col justify-center item-center z-10">
                 <div className="font-bold gradient-text text-center"><ScrollFloat animationDuration={1} ease='back.inOut(2)' scrollStart='center bottom+=50%' scrollEnd='bottom bottom-=40%' stagger={0.03}>{Text}</ScrollFloat></div>
                 <div className="text-[#f3f4f6] font-thin text-center text-xl max-w-2xl mx-auto"><BlurText text="A curated selection of my recent projects spanning web design, branding, and digital experiences." delay={150} animateBy="words" direction="top" /></div>
             </div>
             
-            <div className="grid grid-cols-3 items-center justify-items-center mt-20">
+            <div className="grid grid-cols-3 items-center justify-items-center mt-20 z-12">
 
             {projects.map((project,index)=>(
                 <AnimatedContent
-  distance={150}
+  distance={50}
   delay={500}
   direction="vertical"
   reverse={false}
