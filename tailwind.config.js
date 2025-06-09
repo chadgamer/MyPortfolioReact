@@ -1,22 +1,24 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      animation: {
-        'marquee': 'marquee 25s linear infinite',
-        'marquee2': 'marquee2 25s linear infinite',
+      translate: {
+        '101': '101%',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(calc(-100% - 2rem))' }
-        },
-        marquee2: {
-          '0%': { transform: 'translateX(calc(100% + 2rem))' },
-          '100%': { transform: 'translateX(0)' }
-        },
+          '100%': { transform: 'translateX(-50%)' },
+        }
       },
+      animation: {
+        marquee: 'marquee 15s linear infinite',
+      },
+    },
+    fontFamly: {
+      main:['DM Sans', 'sans-serif'],
+      secondary: ['Poppins', 'sans-serif'],
     },
   },
   plugins: [],

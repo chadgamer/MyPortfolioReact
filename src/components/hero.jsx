@@ -28,10 +28,10 @@ function Hero() {
       </div>
 
 
-      <div className='relative z-5 flex flex-col  justify-center h-full'>
+      <div className='relative z-10 flex flex-col  justify-center h-full'>
         <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-        <div className='text-4xl mb-4 text-white font-semibold max-md:text-xl'>I'm a aspiring <RotatingText
-        texts={['UI/UX Designer', 'Front-end Developer']}
+        <div className='text-4xl mb-4 text-white font-semibold max-md:text-xl font-[DM_Sans]'>I'm a aspiring <RotatingText
+        texts={['Web Design', 'Web Developer']}
         mainClassName="gradient-bg"
         staggerFrom={"last"}
         initial={{ y: "100%" }}
@@ -43,14 +43,14 @@ function Hero() {
         rotationInterval={2000}
         /></div>
 
-        <h1 className='text-8xl font-bold mb-2 text-white'>I'm Mc Lester Papa</h1>
-        <h1 className='text-8xl font-bold mb-6 gradient-text'>Jr Web Developer</h1>
-        <p className='max-w-2xl text-2xl text-white font-normal'>
+        <h1 className='text-8xl font-bold mb-2 text-white font-[DM_Sans]'>I'm Mc Lester Papa</h1>
+        <h1 className='text-7xl font-bold mb-6 gradient-text font-[DM_Sans]'>Full Stack Developer Developer</h1>
+        <p className='max-w-2xl text-2xl text-white font-normal font-[DM_Sans]'>
           I'm a fresh graduate from Bulacan State University, based in the Philippines. 
           I'm passionate about crafting modern, user-centered interfaces and building 
           responsive websites that deliver great user experiences.
         </p>
-        <button className='gradient-bg text-white rounded-lg w-50 h-15 mt-10'><a href="">Download CV</a></button>
+        <button className='bg-[#020203] font-[DM_Sans] text-white rounded-lg w-50 h-15 mt-10 border border-indigo-600 hover:bg-indigo-600 hover:duration-300 duration-300'><a href="">Download CV</a></button>
             </FadeContent>
       </div>
 

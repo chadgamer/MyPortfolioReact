@@ -11,6 +11,7 @@ import {
   LinearScale 
 } from 'chart.js';
 import { Radar, Bar } from 'react-chartjs-2';
+import Particles from './reactbits/particles';
 
 ChartJS.register(
   RadialLinearScale,
@@ -158,21 +159,33 @@ const barOptions = {
 
 
     return (
-        <div className="row-start-5 bg-[#020203] ">
+        <div className="row-start-5 bg-[#020203] relative ">
+            <div className='absolute inset-0 z-5'>
+                                <Particles
+                            particleColors={['#ffffff', '#ffffff']}
+                            particleCount={200}
+                            particleSpread={10}
+                            speed={0.1}
+                            particleBaseSize={100}
+                            moveParticlesOnHover={false}
+                            alphaParticles={false}
+                            disableRotation={false}
+                          />
+                              </div>
             <div>
                 <div className="flex flex-col items-center justify-center gap-6">
-            <h1 className="font-poppins text-4xl font-bold text-center mt-16 gradient-text">
+            <h1 className="font-poppins text-4xl font-bold text-center mt-16 gradient-text font-[DM_Sans]">
                 Skills & Expertise
             </h1>
-            <p className="text-[#f3f4f6]">My technical toolkit and design expertise that I bring to every project, continuously evolving<br />through learning and practical application.</p>
+            <p className="text-[#f3f4f6] font-[DM_Sans]">My technical toolkit and design expertise that I bring to every project, continuously evolving<br />through learning and practical application.</p>
             </div>
 
-            <div >
+            <div className="flex flex-col items-center justify-center mt-20 gap-10">
                 {/* 1st card */}
-                <div className="grid grid-col-2 items-center justify-center">
+                <div className="grid grid-col-2 items-center justify-center z-10 relative">
 
                     <div className="col-start-1 bg-[#030405]  w-200 h-170 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
-                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10 mb-10">Technical Proficiency</h1>
+                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10 mb-10 font-[DM_Sans]">Technical Proficiency</h1>
                         <div className="h-130 w-150 flex items-center justify-center text-center">
                         <Radar data={data} options={options} />
                         </div>
@@ -180,7 +193,7 @@ const barOptions = {
                    
 
                     <div className="col-start-2 bg-[#030405]  w-200 h-170 m-10 flex flex-col items-center justify-center p-6 rounded-2xl gap-4">
-                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10 mb-10">Experience Level</h1>
+                        <h1 className="text-[#f3f4f6] text-2xl font-semibold mt-10 mb-10 font-[DM_Sans]">Experience Level</h1>
                         <div className="h-150 w-150 flex items-center justify-center text-center">
                             <Bar data={bardata} options={barOptions} />
                         </div>
