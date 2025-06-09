@@ -35,6 +35,7 @@ export default function Aboutme () {
         <div class="grid items-center md:grid-cols-2 md:gap-x-20 gap-y-10">
             <div class="relative pl-16 pr-10 sm:pl-6 md:pl-0 xl:pr-0 md:order-2">
 
+
                 <div class="relative max-w-xs ml-auto">
                     <div class="overflow-hidden aspect-w-3 aspect-h-4">
                         <img class="object-cover w-full h-full scale-150" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/3/man-woman-discussing.jpg" alt="" />
